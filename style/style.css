@@ -266,8 +266,6 @@ body{
     color: #FFFFFF;
 }
 
-
-
 .purchase-btn {
     position: absolute;
     width: 168px;
@@ -1485,10 +1483,6 @@ body{
 .gallery-full-screen-btn:hover {
     background: url(../img/gallery/full_screen_btn_01.svg) #18CFAB no-repeat center;
 }
-
-/* .modal {
-    display: none;
-} */
 
 .modal {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
