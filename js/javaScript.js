@@ -134,7 +134,7 @@ function next () {
         imgArray[0].remove();
         addImg();
 
-    }, 1000);
+    }, 500);
 }
 
 function addImgPrep () {
@@ -162,7 +162,7 @@ function prev () {
         className[step-1] = imgArray[srcArr.length-1].getAttribute('class');
         imgArray[srcArr.length-1].remove();
         addImgPrep();
-    }, 1000);
+    }, 500);
 }
 
 function showFeedback (event) {
@@ -202,8 +202,8 @@ function showFeedback2 (elem) {
     const sliderPhotos = document.querySelectorAll('.feedback-slider__photo');
     const feedbackText = document.querySelectorAll('.feedback-text__item');
     let currentPhoto = elem;
-    let titleData = currentPhoto.getAttribute("data-id");
-    let currentFeedbackText = document.querySelector(titleData);
+    let dataTitle = currentPhoto.getAttribute("data-id");
+    let currentFeedbackText = document.querySelector(dataTitle);
     if (!currentPhoto.classList.contains('active')){
         sliderPhotos.forEach(el => {
             el.classList.remove('active');

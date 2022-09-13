@@ -922,6 +922,25 @@ body{
     height: 208px;
     width: 285px;
     position: relative;
+    rotate: 0;
+    animation-name: work_img_rotate;
+    animation-duration: 1s;
+}
+
+@keyframes  work_img_rotate{
+
+    0%{
+        rotate: 0deg;
+
+    }
+    50%{
+        rotate: -50deg;
+
+    }
+    100%{
+        rotate: 360deg;
+
+    }
 }
 
 .all-works.active {
@@ -1282,7 +1301,27 @@ body{
 }
 
 .feedback-text__item.active {
-    opacity: 100%;
+    opacity: 1%;
+    animation-name: show_feedback;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes  show_feedback{
+
+    0%{
+        opacity: 1%;
+
+    }
+    50%{
+        opacity: 20%;
+        transform: rotateX(180deg);
+    }
+    100%{
+        opacity: 100%;
+
+    }
 }
 
 .feedback-slider {
@@ -1314,10 +1353,32 @@ body{
 
 .feedback-slider__photo.active {
     margin-bottom: 35px;
+    animation-name: show_slider-photo;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+}
+
+@keyframes  show_slider-photo{
+
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 40%;
+        transform: rotateY(200deg);
+
+    }
+    100%{
+        opacity: 100%;
+
+    }
 }
 
 .feedback-slider__photo:hover {
     margin-bottom: 35px;
+    border: 5px solid #18CFAB;
+    border-radius: 50%;
 }
 
 .feedback-slider__photo-wrap {
@@ -1416,7 +1477,27 @@ body{
 .grid-item.active {
     margin-bottom: 20px;
     display: flex;
-    opacity: 100%;
+    opacity: 0;
+    animation-name: show_gallery-photo;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes  show_gallery-photo{
+
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 40%;
+        transform: rotateY(360deg);
+
+    }
+    100%{
+        opacity: 100%;
+
+    }
 }
 
 .grid-item img {
@@ -1494,6 +1575,22 @@ body{
     height: 100vh;
     z-index: 997;
     overflow-y: auto;
+    opacity: 50%;
+    animation-name: show_modal-window;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes  show_modal-window{
+
+    0%{
+        opacity: 50%;
+
+    }
+    100%{
+        opacity: 100%;
+
+    }
 }
 
 .modal-img {
@@ -1505,6 +1602,29 @@ body{
     padding: 20px;
     z-index: 998;
     overflow-y: auto;
+    opacity: 0;
+    animation-name: show_modal-photo;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes  show_modal-photo{
+
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 10%;
+
+    }
+    75% {
+        opacity: 30%;
+    }
+    100%{
+        opacity: 100%;
+
+    }
 }
 
 .grid-item--width2 img {
