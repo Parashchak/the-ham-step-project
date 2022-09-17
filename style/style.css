@@ -922,23 +922,25 @@ body{
     height: 208px;
     width: 285px;
     position: relative;
-    rotate: 0;
+    opacity: 0;
     animation-name: work_img_rotate;
     animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 @keyframes  work_img_rotate{
 
     0%{
-        rotate: 0deg;
+        transform: rotateX(90deg);
+        opacity: 0;
 
     }
     50%{
-        rotate: -50deg;
+        opacity: 40%;
 
     }
     100%{
-        rotate: 360deg;
+        opacity: 100%;
 
     }
 }
